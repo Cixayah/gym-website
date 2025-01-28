@@ -1,7 +1,7 @@
 // app/page.tsx
-import Image from 'next/image'
-import Link from 'next/link'
-import { Dumbbell, Users, Clock } from 'lucide-react'
+import Image from 'next/image';
+import Link from 'next/link';
+import { Dumbbell, Users, Clock } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -9,8 +9,8 @@ export default function Home() {
       <section className="relative h-[600px]">
         <div className="absolute inset-0">
           <Image
-            src="/api/placeholder/1920/600"
-            alt="Academia"
+            src="/ef_cropped.jpg"
+            alt="Logo Extreme Fitness"
             fill
             className="object-cover"
             priority
@@ -46,36 +46,39 @@ export default function Home() {
             {benefits.map((benefit) => (
               <div
                 key={benefit.title}
-                className="text-center p-6 rounded-lg bg-gray-50"
+                className="text-center p-6 rounded-lg bg-blue-950"
               >
                 <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full bg-red-100">
                   {benefit.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.description}</p>
+                <h3 className={`text-xl font-semibold mb-2 ${benefit.titleColor}`}>{benefit.title}</h3>
+                <p className="text-gray-400">{benefit.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
     </>
-  )
+  );
 }
 
 const benefits = [
   {
     title: "Equipamentos Modernos",
+    titleColor: "text-white-500",
     description: "Academia completa com os equipamentos mais modernos do mercado",
     icon: <Dumbbell className="w-6 h-6 text-red-600" />,
   },
   {
     title: "Profissionais Qualificados",
+    titleColor: "text-white-500",
     description: "Equipe de instrutores especializados para te auxiliar",
     icon: <Users className="w-6 h-6 text-red-600" />,
   },
   {
     title: "Horário Flexível",
+    titleColor: "text-white-500",
     description: "Academia aberta todos os dias, inclusive feriados",
     icon: <Clock className="w-6 h-6 text-red-600" />,
   },
-]
+];
