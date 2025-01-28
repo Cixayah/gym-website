@@ -1,8 +1,7 @@
-// src/components/Navbar.tsx
 import Link from 'next/link'
 import { Menu } from 'lucide-react'
 
-export function Navbar() {
+export default function Navbar() {
     return (
         <nav className="bg-black text-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
