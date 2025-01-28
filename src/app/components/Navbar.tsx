@@ -18,7 +18,7 @@ export function Navbar() {
                             <Link href="/" className="hover:text-gray-300 px-3 py-2">
                                 Início
                             </Link>
-                            <Link href="/planos" className="hover:text-gray-300 px-3 py-2">
+                            <Link href="#banner" className="hover:text-gray-300 px-3 py-2">
                                 Planos
                             </Link>
                             <Link href="/aulas" className="hover:text-gray-300 px-3 py-2">

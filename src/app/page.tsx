@@ -27,7 +27,7 @@ export default function Home() {
               Comece sua jornada hoje com os melhores profissionais
             </p>
             <Link
-              href="/planos"
+              href="#banner"
               className="mt-8 inline-block bg-red-600 px-8 py-3 rounded-lg font-medium hover:bg-red-700 transition-colors"
             >
               Começar agora
@@ -36,7 +36,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-16" id='banner'>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center mb-12">
             Por que escolher a Extreme Fitness?
