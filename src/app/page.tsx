@@ -36,19 +36,19 @@ export default function Home() {
 const benefits = [
   {
     title: "Equipamentos Modernos",
-    titleColor: "text-white-500",
+    titleColor: "text-gray-500",
     description: "Academia completa com os equipamentos mais modernos do mercado",
     icon: <Dumbbell className="w-6 h-6 text-red-600" />,
   },
   {
     title: "Profissionais Qualificados",
-    titleColor: "text-white-500",
+    titleColor: "text-gray-500",
     description: "Equipe de instrutores especializados para te auxiliar",
     icon: <Users className="w-6 h-6 text-red-600" />,
   },
   {
     title: "Horário Flexível",
-    titleColor: "text-white-500",
+    titleColor: "text-gray-500",
     description: "Academia aberta todos os dias, inclusive feriados",
     icon: <Clock className="w-6 h-6 text-red-600" />,
   },
