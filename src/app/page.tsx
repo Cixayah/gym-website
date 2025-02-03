@@ -90,28 +90,30 @@ export default function Home() {
     <>
       <HeroCarousel />
 
-      <section className="py-16" id="banner">
+      <section className="py-16 text-white" id="about">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Por que escolher a Extreme Fitness?
-          </h2>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold mb-6">Sobre a Extreme Fitness</h2>
+              <p className="mb-4">
+                Com mais de 10 anos de atuação no mercado, a Extreme Fitness se destaca como uma referência quando o assunto é qualidade e resultados consistentes. Durante mais de uma década, nos empenhamos em transformar vidas por meio do esporte, promovendo a saúde, o bem-estar e a superação pessoal. Nosso compromisso é ser a ponte que conecta nossos alunos ao melhor de si mesmos, seja para atingir seus objetivos fitness, melhorar a qualidade de vida ou simplesmente buscar uma rotina mais saudável.
+              </p>
+              <p>
+                Para isso, contamos com uma equipe de profissionais altamente qualificados, que estão sempre prontos para oferecer orientação personalizada e acompanhamento contínuo. Nossas instalações bem equipadas, foram pensadas para proporcionar o máximo de conforto e eficiência, garantindo que cada aluno tenha a melhor experiência possível, desde o momento em que entra em nossa academia até a conquista de seus objetivos.
+              </p>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {benefits.map((benefit) => (
-              <div
-                key={benefit.title}
-                className="text-center p-6 rounded-lg bg-blue-950"
-              >
-                <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full bg-red-100">
-                  {benefit.icon}
-                </div>
-                <h3 className={`text-xl font-semibold mb-2 ${benefit.titleColor}`}>{benefit.title}</h3>
-                <p className="text-gray-400">{benefit.description}</p>
-              </div>
-            ))}
+            </div>
+            <div className="relative aspect-video rounded-lg">
+              <Image
+                src="https://i.ibb.co/ZW8RhpD/DOCTYPE-html-html-Mirrored-from-www-gymcenter-com-br-by-HTTrack-Website-Copier3-x-XR-CO-2014-Fri-16.png"
+                alt="Academia"
+                fill
+                className="rounded-lg object-cover"
+              />
+            </div>
           </div>
         </div>
-      </section>
+      </section >
 
       <section className="py-16  bg-blue-950 rounded-lg" id="plans" >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -142,31 +144,29 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 text-white" id="about">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold mb-6">Sobre a Extreme Fitness</h2>
-              <p className="mb-4">
-                Com mais de 10 anos de atuação no mercado, a Extreme Fitness se destaca como uma referência quando o assunto é qualidade e resultados consistentes. Durante mais de uma década, nos empenhamos em transformar vidas por meio do esporte, promovendo a saúde, o bem-estar e a superação pessoal. Nosso compromisso é ser a ponte que conecta nossos alunos ao melhor de si mesmos, seja para atingir seus objetivos fitness, melhorar a qualidade de vida ou simplesmente buscar uma rotina mais saudável.
-              </p>
-              <p>
-                Para isso, contamos com uma equipe de profissionais altamente qualificados, que estão sempre prontos para oferecer orientação personalizada e acompanhamento contínuo. Nossas instalações bem equipadas, foram pensadas para proporcionar o máximo de conforto e eficiência, garantindo que cada aluno tenha a melhor experiência possível, desde o momento em que entra em nossa academia até a conquista de seus objetivos.
-              </p>
 
-            </div>
-            <div className="relative aspect-video rounded-lg">
-              <Image
-                src="https://i.ibb.co/ZW8RhpD/DOCTYPE-html-html-Mirrored-from-www-gymcenter-com-br-by-HTTrack-Website-Copier3-x-XR-CO-2014-Fri-16.png"
-                alt="Academia"
-                fill
-                className="rounded-lg object-cover"
-              />
-            </div>
+      <section className="py-16" id="banner">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Por que escolher a Extreme Fitness?
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {benefits.map((benefit) => (
+              <div
+                key={benefit.title}
+                className="text-center p-6 rounded-lg bg-blue-950"
+              >
+                <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full bg-red-100">
+                  {benefit.icon}
+                </div>
+                <h3 className={`text-xl font-semibold mb-2 ${benefit.titleColor}`}>{benefit.title}</h3>
+                <p className="text-gray-400">{benefit.description}</p>
+              </div>
+            ))}
           </div>
         </div>
-      </section >
-
+      </section>
       {/* <section className="py-16" id="contact">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center mb-12">Contato</h2>
