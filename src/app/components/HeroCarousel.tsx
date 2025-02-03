@@ -69,13 +69,14 @@ const HeroCarousel = () => {
             </div>
 
             {/* Conteúdo sobreposto */}
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
-                <div className="text-white">
-                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
-                        Transforme seu corpo, <br />transforme sua vida
+            <div className="relative max-w-7xl mx-auto h-full flex items-center z-20">
+                <div className="text-white w-full px-8 sm:px-16">
+                    {/* Para mobile: text-3xl, para telas médias: text-4xl, e para telas grandes: text-6xl */}
+                    <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold">
+                        Transforme seu corpo, transforme sua vida
                     </h1>
-                    <p className="mt-4 text-xl">
-                        Comece sua jornada hoje com os melhores profissionais
+                    <p className="mt-5 text-base sm:text-xl">
+                        Comece sua jornada hoje mesmo
                     </p>
                     <Link
                         href="#banner"
@@ -89,21 +90,21 @@ const HeroCarousel = () => {
             {/* Botões de navegação */}
             <button
                 onClick={prevSlide}
-                className="absolute left-4 top-1/2 -translate-y-1/2 text-white p-2 rounded-full bg-black/50 hover:bg-black/75 transition-colors"
+                className="absolute left-2 top-1/2 -translate-y-1/2 text-white p-2 rounded-full bg-black/50 hover:bg-black/75 transition-colors z-30"
                 aria-label="Slide anterior"
             >
                 <ChevronLeft className="w-6 h-6" />
             </button>
             <button
                 onClick={nextSlide}
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-white p-2 rounded-full bg-black/50 hover:bg-black/75 transition-colors"
+                className="absolute right-2 top-1/2 -translate-y-1/2 text-white p-2 rounded-full bg-black/50 hover:bg-black/75 transition-colors z-30"
                 aria-label="Próximo slide"
             >
                 <ChevronRight className="w-6 h-6" />
             </button>
 
             {/* Indicadores */}
-            <div className="absolute bottom-4 w-full flex justify-center gap-2">
+            <div className="absolute bottom-4 w-full flex justify-center gap-2 z-30">
                 {slides.map((_, index) => (
                     <button
                         key={index}

@@ -1,7 +1,8 @@
 'use client'
 
 import HeroCarousel from './components/HeroCarousel';
-import { Dumbbell, Users, Clock, Mail, Phone, MapPin } from 'lucide-react';
+import { Dumbbell, Users, Clock /* Mail, Phone, MapPin */ } from 'lucide-react';
+import Image from 'next/image';
 
 // Define the type for plan object
 interface Plan {
@@ -60,10 +61,10 @@ const plans: Plan[] = [
   },
 ];
 
-const contactInfo = [
+/*const contactInfo = [
   {
-    title: "Email",
-    content: "contato@extremefitness.com",
+    title: "E-mail",
+    content: "contato@extremefitness.com.br",
     icon: <Mail className="w-6 h-6 text-red-600" />,
   },
   {
@@ -77,7 +78,7 @@ const contactInfo = [
     icon: <MapPin className="w-6 h-6 text-red-600" />,
   },
 ];
-
+*/
 export default function Home() {
   const handleWhatsAppClick = (plan: Plan) => {
     const message = `Olá, vim pelo site e gostaria de assinar o plano ${plan.title} de R$ ${plan.price}`;
@@ -155,18 +156,19 @@ export default function Home() {
                 para proporcionar a melhor experiência aos nossos alunos.
               </p>
             </div>
-            <div className="aspect-video  rounded-lg">
-              <img
+            <div className="relative aspect-video rounded-lg">
+              <Image
                 src="https://i.ibb.co/ZW8RhpD/DOCTYPE-html-html-Mirrored-from-www-gymcenter-com-br-by-HTTrack-Website-Copier3-x-XR-CO-2014-Fri-16.png"
                 alt="Academia"
-                className="rounded-lg w-full h-full object-cover"
+                fill
+                className="rounded-lg object-cover"
               />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16" id="contact">
+      {/* <section className="py-16" id="contact">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center mb-12">Contato</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -181,7 +183,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }
