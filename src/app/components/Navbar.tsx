@@ -55,19 +55,19 @@ export default function Navbar() {
                     {/* Links de navegação (visíveis em telas maiores) */}
                     <div className="hidden md:block">
                         <div className="ml-10 flex items-baseline space-x-4">
-                            <Link href="#" className="hover:text-red-500 active:text-red-700 px-3 py-2 transition-colors duration-200">
+                            <Link href="/" className="hover:text-red-500 active:text-red-700 px-3 py-2 transition-colors duration-200">
                                 Início
                             </Link>
-                            <Link href="#banner" className="hover:text-red-500 active:text-red-700 px-3 py-2 transition-colors duration-200">
+                            <Link href="#plans" className="hover:text-red-500 active:text-red-700 px-3 py-2 transition-colors duration-200">
                                 Planos
                             </Link>
 
-                            <Link href="#sobre" className="hover:text-red-500 active:text-red-700 px-3 py-2 transition-colors duration-200">
+                            <Link href="#about" className="hover:text-red-500 active:text-red-700 px-3 py-2 transition-colors duration-200">
                                 Sobre
                             </Link>
-                            <Link href="#contato" className="hover:text-red-500 active:text-red-700 px-3 py-2 transition-colors duration-200">
+                            {/* <Link href="#contato" className="hover:text-red-500 active:text-red-700 px-3 py-2 transition-colors duration-200">
                                 Contato
-                            </Link>
+                            </Link> */}
                         </div>
                     </div>
 
@@ -96,7 +96,7 @@ export default function Navbar() {
                             Planos
                         </Link>
 
-                        <Link href="#sobre" onClick={closeMenu} className="w-full hover:bg-red-500 active:bg-red-700 px-3 py-2 text-center rounded-md transition-colors duration-200">
+                        <Link href="#about" onClick={closeMenu} className="w-full hover:bg-red-500 active:bg-red-700 px-3 py-2 text-center rounded-md transition-colors duration-200">
                             Sobre
                         </Link>
                         <Link href="#contato" onClick={closeMenu} className="w-full hover:bg-red-500 active:bg-red-700 px-3 py-2 text-center rounded-md transition-colors duration-200">

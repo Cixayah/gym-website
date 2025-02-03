@@ -73,7 +73,7 @@ const HeroCarousel = () => {
                 <div className="text-white w-full px-8 sm:px-16">
                     {/* Para mobile: text-3xl, para telas médias: text-4xl, e para telas grandes: text-6xl */}
                     <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold">
-                        Transforme seu corpo, transforme sua vida
+                        Transforme seu corpo, <br />transforme sua vida
                     </h1>
                     <p className="mt-5 text-base sm:text-xl">
                         Comece sua jornada hoje mesmo
