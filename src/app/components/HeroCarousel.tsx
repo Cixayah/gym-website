@@ -32,7 +32,7 @@ const HeroCarousel = () => {
         }, 5000);
 
         return () => clearInterval(timer);
-    }, []);
+    }, [slides.length]);
 
     const nextSlide = () => {
         setCurrentIndex((prevIndex) =>
@@ -79,7 +79,7 @@ const HeroCarousel = () => {
                     </p>
                     <Link
                         href="#banner"
-                        className="mt-8 inline-block bg-red-600 px-8 py-3 rounded-lg font-medium hover:bg-red-700 transition-colors"
+                        className="mt-8 inline-block bg-red-700 px-8 py-3 rounded-lg font-medium hover:bg-red-600 transition-colors"
                     >
                         Começar agora
                     </Link>

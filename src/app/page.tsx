@@ -1,13 +1,99 @@
-// app/page.tsx
+'use client'
+
 import HeroCarousel from './components/HeroCarousel';
-import { Dumbbell, Users, Clock } from 'lucide-react';
+import { Dumbbell, Users, Clock, Mail, Phone, MapPin } from 'lucide-react';
+
+// Define the type for plan object
+interface Plan {
+  title: string;
+  price: string;
+  features: string[];
+}
+
+const benefits = [
+  {
+    title: "Equipamentos Modernos",
+    titleColor: "text-gray-100",
+    description: "Academia completa com todos os equipamentos necessários",
+    icon: <Dumbbell className="w-6 h-6 text-red-600" />,
+  },
+  {
+    title: "Profissionais Qualificados",
+    titleColor: "text-gray-100",
+    description: "Equipe de instrutores especializados para te auxiliar",
+    icon: <Users className="w-6 h-6 text-red-600" />,
+  },
+  {
+    title: "Horário Flexível",
+    titleColor: "text-gray-100",
+    description: "Academia aberta de segunda à sábado, inclusive em feriados",
+    icon: <Clock className="w-6 h-6 text-red-600" />,
+  },
+];
+
+const plans: Plan[] = [
+  {
+    title: "Plano FIT",
+    price: "80,00",
+    features: [
+      "Acesso à musculação",
+      "Avaliação física mensal",
+      "Horário comercial",
+    ],
+  },
+  {
+    title: "Plano Econômico",
+    price: "80,00",
+    features: [
+      "Acesso à musculação",
+      "Aulas coletivas",
+      "Avaliação física mensal",
+      "Horário livre",
+    ],
+  },
+  {
+    title: "Plano Extreme",
+    price: "90,00",
+    features: [
+      "Acesso à musculação",
+      "Aulas coletivas",
+      "Personal trainer",
+      "Avaliação física quinzenal",
+      "Horário livre",
+    ],
+  },
+];
+
+const contactInfo = [
+  {
+    title: "Email",
+    content: "contato@extremefitness.com",
+    icon: <Mail className="w-6 h-6 text-red-600" />,
+  },
+  {
+    title: "Telefone",
+    content: "(11) 99999-9999",
+    icon: <Phone className="w-6 h-6 text-red-600" />,
+  },
+  {
+    title: "Endereço",
+    content: "Rua da Academia, 123 - São Paulo, SP",
+    icon: <MapPin className="w-6 h-6 text-red-600" />,
+  },
+];
 
 export default function Home() {
+  const handleWhatsAppClick = (plan: Plan) => {
+    const message = `Olá, vim pelo site e gostaria de assinar o plano ${plan.title} de R$ ${plan.price}`;
+    const whatsappUrl = `https://wa.me/5517997881068?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <>
       <HeroCarousel />
 
-      <section className="py-16" id='banner'>
+      <section className="py-16" id="banner">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center mb-12">
             Por que escolher a Extreme Fitness?
@@ -29,27 +115,77 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="py-16  bg-blue-950 rounded-lg" id="plans" >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-12 text-white">Nossos Planos</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {plans.map((plan) => (
+              <div key={plan.title} className="bg-gray-100 p-6 rounded-lg shadow-md flex flex-col h-full">
+                <div className="flex-grow">
+                  <h3 className="text-xl font-bold mb-4 text-blue-950">{plan.title}</h3>
+                  <p className="text-3xl font-bold mb-4 text-blue-950">R$ {plan.price}</p>
+                  <ul className="space-y-2 mb-6">
+                    {plan.features.map((feature) => (
+                      <li key={feature} className="flex items-center gap-2 text-gray-700">
+                        <span className="text-green-500">✓</span> {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <button
+                  onClick={() => handleWhatsAppClick(plan)}
+                  className="w-full py-2 px-4 bg-red-600 hover:bg-red-700 text-white rounded-md transition-colors mt-auto"
+                >
+                  Assinar Agora
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 text-white" id="about">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold mb-6">Sobre a Extreme Fitness</h2>
+              <p className="mb-4">
+                Há mais de 10 anos no mercado, a Extreme Fitness é referência em qualidade
+                e resultados. Nossa missão é transformar vidas através do esporte e bem-estar.
+              </p>
+              <p>
+                Contamos com uma equipe altamente qualificada e instalações modernas
+                para proporcionar a melhor experiência aos nossos alunos.
+              </p>
+            </div>
+            <div className="aspect-video bg-gray-800 rounded-lg">
+              <img
+                src="https://i.ibb.co/yfw054B/Whats-App-Image-2024-08-16-at-11-58-18.jpg"
+                alt="Academia"
+                className="rounded-lg w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16" id="contact">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-12">Contato</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {contactInfo.map((info) => (
+              <div key={info.title} className="text-center">
+                <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full bg-red-100">
+                  {info.icon}
+                </div>
+                <h3 className="font-semibold mb-2">{info.title}</h3>
+                <p className="text-gray-600">{info.content}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }
-
-const benefits = [
-  {
-    title: "Equipamentos Modernos",
-    titleColor: "text-gray-500",
-    description: "Academia completa com os equipamentos mais modernos do mercado",
-    icon: <Dumbbell className="w-6 h-6 text-red-600" />,
-  },
-  {
-    title: "Profissionais Qualificados",
-    titleColor: "text-gray-500",
-    description: "Equipe de instrutores especializados para te auxiliar",
-    icon: <Users className="w-6 h-6 text-red-600" />,
-  },
-  {
-    title: "Horário Flexível",
-    titleColor: "text-gray-500",
-    description: "Academia aberta todos os dias, inclusive feriados",
-    icon: <Clock className="w-6 h-6 text-red-600" />,
-  },
-];
