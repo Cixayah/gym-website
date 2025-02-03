@@ -11,7 +11,7 @@ const HeroCarousel = () => {
 
     const slides = [
         {
-            image: "/ef_cropped.jpg",
+            image: "https://i.ibb.co/yfw054B/Whats-App-Image-2024-08-16-at-11-58-18.jpg",
             alt: "Academia Extreme Fitness",
         },
         {

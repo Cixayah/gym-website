@@ -90,20 +90,20 @@ export default function Navbar() {
                     className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                         }`}
                 >
-                    <div className="flex flex-col space-y-2 pb-3">
-                        <Link href="#" onClick={closeMenu} className="hover:bg-red-500 active:bg-red-700 px-3 py-2 rounded-md transition-colors duration-200">
+                    <div className="flex flex-col items-center justify-center space-y-4 pb-3">
+                        <Link href="#" onClick={closeMenu} className="w-full hover:bg-red-500 active:bg-red-700 px-3 py-2 text-center rounded-md transition-colors duration-200">
                             Início
                         </Link>
-                        <Link href="#banner" onClick={closeMenu} className="hover:bg-red-500 active:bg-red-700 px-3 py-2 rounded-md transition-colors duration-200">
+                        <Link href="#banner" onClick={closeMenu} className="w-full hover:bg-red-500 active:bg-red-700 px-3 py-2 text-center rounded-md transition-colors duration-200">
                             Planos
                         </Link>
-                        <Link href="#aulas" onClick={closeMenu} className="hover:bg-red-500 active:bg-red-700 px-3 py-2 rounded-md transition-colors duration-200">
+                        <Link href="#aulas" onClick={closeMenu} className="w-full hover:bg-red-500 active:bg-red-700 px-3 py-2 text-center rounded-md transition-colors duration-200">
                             Aulas
                         </Link>
-                        <Link href="#sobre" onClick={closeMenu} className="hover:bg-red-500 active:bg-red-700 px-3 py-2 rounded-md transition-colors duration-200">
+                        <Link href="#sobre" onClick={closeMenu} className="w-full hover:bg-red-500 active:bg-red-700 px-3 py-2 text-center rounded-md transition-colors duration-200">
                             Sobre
                         </Link>
-                        <Link href="#contato" onClick={closeMenu} className="hover:bg-red-500 active:bg-red-700 px-3 py-2 rounded-md transition-colors duration-200">
+                        <Link href="#contato" onClick={closeMenu} className="w-full hover:bg-red-500 active:bg-red-700 px-3 py-2 text-center rounded-md transition-colors duration-200">
                             Contato
                         </Link>
                     </div>
