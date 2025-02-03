@@ -148,13 +148,12 @@ export default function Home() {
             <div>
               <h2 className="text-3xl font-bold mb-6">Sobre a Extreme Fitness</h2>
               <p className="mb-4">
-                Há mais de 10 anos no mercado, a Extreme Fitness é referência em qualidade
-                e resultados. Nossa missão é transformar vidas através do esporte e bem-estar.
+                Com mais de 10 anos de atuação no mercado, a Extreme Fitness se destaca como uma referência quando o assunto é qualidade e resultados consistentes. Durante mais de uma década, nos empenhamos em transformar vidas por meio do esporte, promovendo a saúde, o bem-estar e a superação pessoal. Nosso compromisso é ser a ponte que conecta nossos alunos ao melhor de si mesmos, seja para atingir seus objetivos fitness, melhorar a qualidade de vida ou simplesmente buscar uma rotina mais saudável.
               </p>
               <p>
-                Contamos com uma equipe altamente qualificada e instalações modernas
-                para proporcionar a melhor experiência aos nossos alunos.
+                Para isso, contamos com uma equipe de profissionais altamente qualificados, que estão sempre prontos para oferecer orientação personalizada e acompanhamento contínuo. Nossas instalações bem equipadas, foram pensadas para proporcionar o máximo de conforto e eficiência, garantindo que cada aluno tenha a melhor experiência possível, desde o momento em que entra em nossa academia até a conquista de seus objetivos.
               </p>
+
             </div>
             <div className="relative aspect-video rounded-lg">
               <Image
