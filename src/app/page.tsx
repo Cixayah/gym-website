@@ -159,9 +159,9 @@ export default function Home() {
                 para proporcionar a melhor experiência aos nossos alunos.
               </p>
             </div>
-            <div className="aspect-video bg-gray-800 rounded-lg">
+            <div className="aspect-video  rounded-lg">
               <img
-                src="https://i.ibb.co/yfw054B/Whats-App-Image-2024-08-16-at-11-58-18.jpg"
+                src="https://i.ibb.co/ZW8RhpD/DOCTYPE-html-html-Mirrored-from-www-gymcenter-com-br-by-HTTrack-Website-Copier3-x-XR-CO-2014-Fri-16.png"
                 alt="Academia"
                 className="rounded-lg w-full h-full object-cover"
               />
