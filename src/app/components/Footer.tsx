@@ -44,7 +44,7 @@ export default function Footer() {
 
                     {/* Contato */}
                     <div>
-                        <h3 className="text-lg font-bold mb-4">Contato</h3>
+                        <h3 className="text-lg font-bold mb-4">Endereço</h3>
                         <address className="text-gray-300 not-italic">
                             <p>Av. Maranguape, 407</p>
                             <p>Catanduva - SP</p>
