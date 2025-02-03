@@ -157,7 +157,7 @@ export default function Home() {
                 key={benefit.title}
                 className="text-center p-6 rounded-lg bg-blue-950"
               >
-                <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full bg-red-100">
+                <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full bg-gray-100">
                   {benefit.icon}
                 </div>
                 <h3 className={`text-xl font-semibold mb-2 ${benefit.titleColor}`}>{benefit.title}</h3>
@@ -173,7 +173,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {contactInfo.map((info) => (
               <div key={info.title} className="text-center">
-                <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full bg-red-100">
+                <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full bg-gray-100">
                   {info.icon}
                 </div>
                 <h3 className="font-semibold mb-2">{info.title}</h3>
