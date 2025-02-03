@@ -58,11 +58,20 @@ export default function Footer() {
                         <ul className="flex space-x-6">
                             <li>
                                 <Link
-                                    href="https://instagram.com/cixayah"
+                                    href="https://www.instagram.com/academiaextremefitness_/"
                                     target="_blank"
                                     className="text-gray-300 hover:text-white transition-colors duration-200"
                                 >
                                     <Instagram size={24} />
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="https://www.facebook.com/profile.php?id=100009066871226"
+                                    target="_blank"
+                                    className="text-gray-300 hover:text-white transition-colors duration-200"
+                                >
+                                    <Facebook size={24} />
                                 </Link>
                             </li>
                             <li>
@@ -81,15 +90,6 @@ export default function Footer() {
                                     className="text-gray-300 hover:text-white transition-colors duration-200"
                                 >
                                     <Twitter size={24} />
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href="https://www.facebook.com"
-                                    target="_blank"
-                                    className="text-gray-300 hover:text-white transition-colors duration-200"
-                                >
-                                    <Facebook size={24} />
                                 </Link>
                             </li>
 
