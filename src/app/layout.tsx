@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Academia Extreme Fitness',
-  description: 'Sua academia para resultados reais',
+  // description: 'Sua academia para resultados reais',
 };
 
 export default function RootLayout({
