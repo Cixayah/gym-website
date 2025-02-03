@@ -1,45 +1,47 @@
-"use client"; // Adicione isso no topo do arquivo para usar hooks do React
+"use client";
 
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
-import { useState, useEffect } from 'react'; // Importe useEffect para detectar a rolagem
-import Image from 'next/image'; // Importe o componente Image do Next.js
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function Navbar() {
-    const [isOpen, setIsOpen] = useState(false); // Estado para controlar o menu móvel
-    const [isScrolled, setIsScrolled] = useState(false); // Estado para controlar a rolagem
+    const [isOpen, setIsOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
 
-    // Função para alternar o menu móvel
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
 
-    // Efeito para detectar a rolagem da página
+    const closeMenu = () => {
+        setIsOpen(false);  // Fecha o menu
+    };
+
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 0) {
-                setIsScrolled(true); // Ativa o estado de rolagem
+                setIsScrolled(true);
             } else {
-                setIsScrolled(false); // Desativa o estado de rolagem
+                setIsScrolled(false);
             }
         };
 
-        window.addEventListener('scroll', handleScroll); // Adiciona o listener de rolagem
+        window.addEventListener('scroll', handleScroll);
         return () => {
-            window.removeEventListener('scroll', handleScroll); // Remove o listener ao desmontar
+            window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
     return (
         <nav
-            className={`bg-black text-white fixed w-full z-50 transition-opacity duration-300 ${isScrolled ? 'bg-opacity-90' : 'bg-opacity-100'
+            className={`bg-black text-white fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-opacity-90' : 'bg-opacity-100'
                 }`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <div className="flex-shrink-0">
-                        <Link href="/" className="text-xl font-bold">
+                        <Link href="#" className="text-xl font-bold">
                             <Image
                                 src="https://i.ibb.co/ZW8RhpD/DOCTYPE-html-html-Mirrored-from-www-gymcenter-com-br-by-HTTrack-Website-Copier3-x-XR-CO-2014-Fri-16.png"
                                 alt="Extreme Fitness Logo"
@@ -53,19 +55,19 @@ export default function Navbar() {
                     {/* Links de navegação (visíveis em telas maiores) */}
                     <div className="hidden md:block">
                         <div className="ml-10 flex items-baseline space-x-4">
-                            <Link href="/" className="hover:text-gray-300 px-3 py-2">
+                            <Link href="#" className="hover:text-red-500 active:text-red-700 px-3 py-2 transition-colors duration-200">
                                 Início
                             </Link>
-                            <Link href="#banner" className="hover:text-gray-300 px-3 py-2">
+                            <Link href="#banner" className="hover:text-red-500 active:text-red-700 px-3 py-2 transition-colors duration-200">
                                 Planos
                             </Link>
-                            <Link href="/aulas" className="hover:text-gray-300 px-3 py-2">
+                            <Link href="#aulas" className="hover:text-red-500 active:text-red-700 px-3 py-2 transition-colors duration-200">
                                 Aulas
                             </Link>
-                            <Link href="/sobre" className="hover:text-gray-300 px-3 py-2">
+                            <Link href="#sobre" className="hover:text-red-500 active:text-red-700 px-3 py-2 transition-colors duration-200">
                                 Sobre
                             </Link>
-                            <Link href="/contato" className="hover:text-gray-300 px-3 py-2">
+                            <Link href="#contato" className="hover:text-red-500 active:text-red-700 px-3 py-2 transition-colors duration-200">
                                 Contato
                             </Link>
                         </div>
@@ -75,7 +77,7 @@ export default function Navbar() {
                     <div className="md:hidden">
                         <button
                             onClick={toggleMenu}
-                            className="p-2 focus:outline-none focus:ring-2 focus:ring-gray-300"
+                            className="p-2 rounded-md focus:outline-none"
                             aria-label="Abrir menu"
                         >
                             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -84,27 +86,28 @@ export default function Navbar() {
                 </div>
 
                 {/* Menu móvel (visível quando isOpen é true) */}
-                {isOpen && (
-                    <div className="md:hidden">
-                        <div className="flex flex-col space-y-2 pb-3">
-                            <Link href="/" className="hover:text-gray-300 px-3 py-2">
-                                Início
-                            </Link>
-                            <Link href="#banner" className="hover:text-gray-300 px-3 py-2">
-                                Planos
-                            </Link>
-                            <Link href="/aulas" className="hover:text-gray-300 px-3 py-2">
-                                Aulas
-                            </Link>
-                            <Link href="/sobre" className="hover:text-gray-300 px-3 py-2">
-                                Sobre
-                            </Link>
-                            <Link href="/contato" className="hover:text-gray-300 px-3 py-2">
-                                Contato
-                            </Link>
-                        </div>
+                <div
+                    className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                        }`}
+                >
+                    <div className="flex flex-col space-y-2 pb-3">
+                        <Link href="#" onClick={closeMenu} className="hover:bg-red-500 active:bg-red-700 px-3 py-2 rounded-md transition-colors duration-200">
+                            Início
+                        </Link>
+                        <Link href="#banner" onClick={closeMenu} className="hover:bg-red-500 active:bg-red-700 px-3 py-2 rounded-md transition-colors duration-200">
+                            Planos
+                        </Link>
+                        <Link href="#aulas" onClick={closeMenu} className="hover:bg-red-500 active:bg-red-700 px-3 py-2 rounded-md transition-colors duration-200">
+                            Aulas
+                        </Link>
+                        <Link href="#sobre" onClick={closeMenu} className="hover:bg-red-500 active:bg-red-700 px-3 py-2 rounded-md transition-colors duration-200">
+                            Sobre
+                        </Link>
+                        <Link href="#contato" onClick={closeMenu} className="hover:bg-red-500 active:bg-red-700 px-3 py-2 rounded-md transition-colors duration-200">
+                            Contato
+                        </Link>
                     </div>
-                )}
+                </div>
             </div>
         </nav>
     );
