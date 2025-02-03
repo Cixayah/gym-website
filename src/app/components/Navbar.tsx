@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react'; // Importe useEffect para detectar a rolagem
+import Image from 'next/image'; // Importe o componente Image do Next.js
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false); // Estado para controlar o menu móvel
@@ -39,7 +40,13 @@ export default function Navbar() {
                     {/* Logo */}
                     <div className="flex-shrink-0">
                         <Link href="/" className="text-xl font-bold">
-                            Extreme Fitness
+                            <Image
+                                src="https://i.ibb.co/ZW8RhpD/DOCTYPE-html-html-Mirrored-from-www-gymcenter-com-br-by-HTTrack-Website-Copier3-x-XR-CO-2014-Fri-16.png"
+                                alt="Extreme Fitness Logo"
+                                width={130}
+                                height={30}
+                                className="object-contain"
+                            />
                         </Link>
                     </div>
 

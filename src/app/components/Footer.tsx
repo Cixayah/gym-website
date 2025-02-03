@@ -34,9 +34,9 @@ export default function Footer() {
                     <div>
                         <h3 className="text-lg font-bold mb-4">Contato</h3>
                         <address className="text-gray-300 not-italic">
-                            <p>Rua da Academia, 123</p>
-                            <p>São Paulo - SP</p>
-                            <p>Tel: (11) 1234-5678</p>
+                            <p>Av. Maranguape, 407</p>
+                            <p>Catanduva - SP</p>
+                            <p>Tel: (17) 99788-1068</p>
                         </address>
                     </div>
                 </div>

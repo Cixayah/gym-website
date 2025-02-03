@@ -15,11 +15,11 @@ const HeroCarousel = () => {
             alt: "Academia Extreme Fitness",
         },
         {
-            image: "/api/placeholder/1920/1080",
+            image: "https://i.ibb.co/FV69H5H/Whats-App-Image-2024-08-16-at-18-51-02.jpg",
             alt: "Área de musculação",
         },
         {
-            image: "/api/placeholder/1920/1080",
+            image: "https://i.ibb.co/zVhDTXc/Whats-App-Image-2024-08-16-at-18-52-13.jpg",
             alt: "Área de cardio",
         }
     ];
