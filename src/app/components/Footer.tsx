@@ -29,7 +29,7 @@ export default function Footer() {
                         <h3 className="text-lg font-bold mb-4">Links Rápidos</h3>
                         <ul className="space-y-2">
                             <li>
-                                <Link href="#banner" className="text-gray-300 hover:text-white transition-colors duration-200">
+                                <Link href="#plans" className="text-gray-300 hover:text-white transition-colors duration-200">
                                     Planos
                                 </Link>
                             </li>

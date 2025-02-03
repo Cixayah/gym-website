@@ -41,7 +41,7 @@ export default function Navbar() {
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <div className="flex-shrink-0">
-                        <Link href="#" className="text-xl font-bold">
+                        <Link href="/" className="text-xl font-bold">
                             <Image
                                 src="https://i.ibb.co/ZW8RhpD/DOCTYPE-html-html-Mirrored-from-www-gymcenter-com-br-by-HTTrack-Website-Copier3-x-XR-CO-2014-Fri-16.png"
                                 alt="Extreme Fitness Logo"
