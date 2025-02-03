@@ -14,14 +14,14 @@ export default function Footer() {
                                 <Image
                                     src="https://i.ibb.co/ZW8RhpD/DOCTYPE-html-html-Mirrored-from-www-gymcenter-com-br-by-HTTrack-Website-Copier3-x-XR-CO-2014-Fri-16.png"
                                     alt="Extreme Fitness Logo"
-                                    width={150}
-                                    height={50}
+                                    width={300}
+                                    height={100}
                                     className="object-contain"
                                 />
                             </Link>
 
                         </div>
-                        <p className="text-gray-300">Sua academia para resultados reais</p>
+                        {/* <p className="text-gray-300">Sua academia para resultados reais</p> */}
                     </div>
 
                     {/* Links Rápidos */}
