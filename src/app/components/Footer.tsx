@@ -74,24 +74,7 @@ export default function Footer() {
                                     <Facebook size={24} />
                                 </Link>
                             </li>
-                            <li>
-                                <Link
-                                    href="https://www.youtube.com"
-                                    target="_blank"
-                                    className="text-gray-300 hover:text-white transition-colors duration-200"
-                                >
-                                    <Youtube size={24} />
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href="https://www.tiktok.com"
-                                    target="_blank"
-                                    className="text-gray-300 hover:text-white transition-colors duration-200"
-                                >
-                                    <Twitter size={24} />
-                                </Link>
-                            </li>
+
 
                         </ul>
                     </div>

@@ -13,7 +13,7 @@ interface Plan {
 
 const benefits = [
   {
-    title: "Equipamentos Modernos",
+    title: "Equipamentos",
     titleColor: "text-gray-100",
     description: "Academia completa com todos os equipamentos necessários",
     icon: <Dumbbell className="w-6 h-6 text-red-600" />,

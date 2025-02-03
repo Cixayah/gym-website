@@ -79,7 +79,7 @@ const HeroCarousel = () => {
                         Comece sua jornada hoje mesmo
                     </p>
                     <Link
-                        href="#banner"
+                        href="#plans"
                         className="mt-8 inline-block bg-red-700 px-8 py-3 rounded-lg font-medium hover:bg-red-600 transition-colors"
                     >
                         Começar agora
