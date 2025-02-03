@@ -36,30 +36,26 @@ const plans: Plan[] = [
     title: "Plano FIT",
     price: "80,00",
     features: [
-      "Acesso à musculação",
-      "Avaliação física mensal",
-      "Horário comercial",
+      "Segunda à sábado",
+      "Apenas das 09:00 às 16:00",
     ],
   },
   {
     title: "Plano Econômico",
     price: "80,00",
     features: [
-      "Acesso à musculação",
-      "Aulas coletivas",
-      "Avaliação física mensal",
-      "Horário livre",
+      "3x por semana podendo escolher os dias",
+      "De segunda à sexta das 5:30 às 21:00",
+      "Aos sábados 09:00 às 12:00 e 15:00 às 17:00",
     ],
   },
   {
     title: "Plano Extreme",
     price: "90,00",
     features: [
-      "Acesso à musculação",
-      "Aulas coletivas",
-      "Personal trainer",
-      "Avaliação física quinzenal",
-      "Horário livre",
+      "De segunda à sábado",
+      "De segunda à sexta das 5:30 às 21:00",
+      "Aos sábados 09:00 às 12:00 e 15:00 às 17:00",
     ],
   },
 ];
