@@ -99,9 +99,9 @@ export default function Navbar() {
                         <Link href="#about" onClick={closeMenu} className="w-full hover:bg-red-500 active:bg-red-700 px-3 py-2 text-center rounded-md transition-colors duration-200">
                             Sobre
                         </Link>
-                        <Link href="#contato" onClick={closeMenu} className="w-full hover:bg-red-500 active:bg-red-700 px-3 py-2 text-center rounded-md transition-colors duration-200">
+                        {/* <Link href="#contato" onClick={closeMenu} className="w-full hover:bg-red-500 active:bg-red-700 px-3 py-2 text-center rounded-md transition-colors duration-200">
                             Contato
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
             </div>
