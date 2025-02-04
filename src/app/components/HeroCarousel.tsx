@@ -12,15 +12,15 @@ const HeroCarousel = () => {
     const slides = [
         {
             image: "https://i.ibb.co/yfw054B/Whats-App-Image-2024-08-16-at-11-58-18.jpg",
-            alt: "Academia Extreme Fitness",
+            alt: "Primeira imagem",
         },
         {
             image: "https://i.ibb.co/FV69H5H/Whats-App-Image-2024-08-16-at-18-51-02.jpg",
-            alt: "Área de musculação",
+            alt: "Segunda imagem",
         },
         {
             image: "https://i.ibb.co/zVhDTXc/Whats-App-Image-2024-08-16-at-18-52-13.jpg",
-            alt: "Área de cardio",
+            alt: "Terceira imagem",
         }
     ];
 
