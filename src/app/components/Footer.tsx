@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Instagram, Facebook } from 'lucide-react';  // Correção aqui
+import { SiInstagram, SiFacebook, SiWhatsapp } from 'react-icons/si';
 
 export default function Footer() {
     return (
@@ -67,7 +67,7 @@ export default function Footer() {
                                     target="_blank"
                                     className="text-gray-300 hover:text-white transition-colors duration-200"
                                 >
-                                    <Instagram size={24} />
+                                    <SiInstagram size={24} />
                                 </Link>
                             </li>
                             <li>
@@ -76,10 +76,18 @@ export default function Footer() {
                                     target="_blank"
                                     className="text-gray-300 hover:text-white transition-colors duration-200"
                                 >
-                                    <Facebook size={24} />
+                                    <SiFacebook size={24} />
                                 </Link>
                             </li>
-
+                            <li>
+                                <Link
+                                    href="https://api.whatsapp.com/send/?phone=5517997881068&text=Olá%2C+vim+pelo+site+e+gostaria+de+mais+informações&type=phone_number&app_absent=0"
+                                    target="_blank"
+                                    className="text-gray-300 hover:text-white transition-colors duration-200"
+                                >
+                                    <SiWhatsapp size={24} />
+                                </Link>
+                            </li>
 
                         </ul>
                     </div>

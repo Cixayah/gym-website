@@ -52,7 +52,7 @@ const HeroCarousel = () => {
             <div className="absolute inset-0">
                 {slides.map((slide, index) => (
                     <div
-                        key={index}
+                        key={slide.alt}
                         className={`absolute inset-0 transition-opacity duration-1000 ${index === currentIndex ? 'opacity-100' : 'opacity-0'
                             }`}
                     >
@@ -105,9 +105,9 @@ const HeroCarousel = () => {
 
             {/* Indicadores */}
             <div className="absolute bottom-4 w-full flex justify-center gap-2 z-30">
-                {slides.map((_, index) => (
+                {slides.map((slide, index) => (
                     <button
-                        key={index}
+                        key={slide.alt}
                         onClick={() => setCurrentIndex(index)}
                         className={`w-2 h-2 rounded-full transition-colors ${index === currentIndex ? 'bg-red-600' : 'bg-white/50'
                             }`}

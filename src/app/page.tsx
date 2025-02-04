@@ -61,24 +61,6 @@ const plans: Plan[] = [
   },
 ];
 
-/*const contactInfo = [
-  {
-    title: "E-mail",
-    content: "contato@extremefitness.com.br",
-    icon: <Mail className="w-6 h-6 text-red-600" />,
-  },
-  {
-    title: "Telefone",
-    content: "(11) 99999-9999",
-    icon: <Phone className="w-6 h-6 text-red-600" />,
-  },
-  {
-    title: "Endereço",
-    content: "Rua da Academia, 123 - São Paulo, SP",
-    icon: <MapPin className="w-6 h-6 text-red-600" />,
-  },
-];
-*/
 export default function Home() {
   const handleWhatsAppClick = (plan: Plan) => {
     const message = `Olá, vim pelo site e gostaria de assinar o plano ${plan.title} de R$ ${plan.price}`;
