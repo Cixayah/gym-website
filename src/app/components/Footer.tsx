@@ -90,11 +90,11 @@ export default function Footer() {
                     <p>
                         Desenvolvido por{' '}
                         <Link
-                            href="https://instagram.com/cixayah"
+                            href="https://instagram.com/devcix"
                             target="_blank"
                             className="text-gray-300 hover:text-white transition-colors duration-200"
                         >
-                            Cix
+                            DevCix
                         </Link>
                     </p>
                 </div>
