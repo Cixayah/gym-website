@@ -92,7 +92,7 @@ export default function Navbar() {
                         <Link href="#" onClick={closeMenu} className="w-full hover:bg-red-500 active:bg-red-700 px-3 py-2 text-center rounded-md transition-colors duration-200">
                             Início
                         </Link>
-                        <Link href="#banner" onClick={closeMenu} className="w-full hover:bg-red-500 active:bg-red-700 px-3 py-2 text-center rounded-md transition-colors duration-200">
+                        <Link href="#plans" onClick={closeMenu} className="w-full hover:bg-red-500 active:bg-red-700 px-3 py-2 text-center rounded-md transition-colors duration-200">
                             Planos
                         </Link>
 
