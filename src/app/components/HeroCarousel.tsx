@@ -11,15 +11,15 @@ const HeroCarousel = () => {
 
     const slides = [
         {
-            image: "https://i.ibb.co/yfw054B/Whats-App-Image-2024-08-16-at-11-58-18.jpg",
+            image: "https://img.freepik.com/fotos-gratis/jovem-adulto-praticando-esportes-indoor-na-academia_23-2149205604.jpg?t=st=1738849393~exp=1738852993~hmac=a334c1feed03e942c6041ed67744f3db30d650b45133d51d7f75014319ee3bcf&w=2160",
             alt: "Primeira imagem",
         },
         {
-            image: "https://i.ibb.co/FV69H5H/Whats-App-Image-2024-08-16-at-18-51-02.jpg",
+            image: "https://img.freepik.com/fotos-gratis/pesos-exercer-halterofilista-forte-atletica_1139-709.jpg?t=st=1738849240~exp=1738852840~hmac=281d0e02a28dbc54f8495da17db79e18171b9d8f99a583fffc351e148fbf4352&w=2160",
             alt: "Segunda imagem",
         },
         {
-            image: "https://i.ibb.co/zVhDTXc/Whats-App-Image-2024-08-16-at-18-52-13.jpg",
+            image: "https://img.freepik.com/fotos-gratis/close-up-mulher-trabalhando-na-esteira_23-2148419896.jpg?t=st=1738849558~exp=1738853158~hmac=c06faee03f8f5df94428751a5af9fb7191849507ea301a692148a02aa77dd01a&w=2160",
             alt: "Terceira imagem",
         }
     ];
