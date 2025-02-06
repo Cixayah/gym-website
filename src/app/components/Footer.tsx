@@ -12,11 +12,11 @@ export default function Footer() {
                         <div className="mb-4" >
                             <Link href="/">
                                 <Image
-                                    src="https://i.ibb.co/ZW8RhpD/DOCTYPE-html-html-Mirrored-from-www-gymcenter-com-br-by-HTTrack-Website-Copier3-x-XR-CO-2014-Fri-16.png"
-                                    alt="Extreme Fitness Logo"
+                                    src="/gymcix_logo.png"
+                                    alt="gymcix_logo"
                                     width={300}
                                     height={100}
-                                    className="object-contain"
+                                    className="object-contain transition-transform duration-300 hover:scale-110"
                                 />
                             </Link>
 

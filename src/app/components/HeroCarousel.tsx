@@ -80,7 +80,7 @@ const HeroCarousel = () => {
                     </p>
                     <Link
                         href="#plans"
-                        className="mt-8 inline-block bg-red-700 px-8 py-3 rounded-lg font-medium hover:bg-red-600 transition-colors"
+                        className="mt-8 inline-block bg-purple-700 px-8 py-3 rounded-lg font-medium hover:bg-purple-600 transition-colors"
                     >
                         Começar agora
                     </Link>
@@ -109,7 +109,7 @@ const HeroCarousel = () => {
                     <button
                         key={slide.alt}
                         onClick={() => setCurrentIndex(index)}
-                        className={`w-2 h-2 rounded-full transition-colors ${index === currentIndex ? 'bg-red-600' : 'bg-white/50'
+                        className={`w-2 h-2 rounded-full transition-colors ${index === currentIndex ? 'bg-purple-600' : 'bg-white/50'
                             }`}
                         aria-label={`Ir para slide ${index + 1}`}
                     />

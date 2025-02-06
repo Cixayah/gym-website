@@ -43,11 +43,11 @@ export default function Navbar() {
                     <div className="flex-shrink-0">
                         <Link href="/" className="text-xl font-bold">
                             <Image
-                                src="https://i.ibb.co/ZW8RhpD/DOCTYPE-html-html-Mirrored-from-www-gymcenter-com-br-by-HTTrack-Website-Copier3-x-XR-CO-2014-Fri-16.png"
-                                alt="Extreme Fitness Logo"
-                                width={130}
-                                height={30}
-                                className="object-contain"
+                                src="/gymcix_logo.png"
+                                alt="GYM CIX Logo"
+                                width={60}
+                                height={60}
+                                className="object-contain transition-transform duration-300 hover:scale-110"
                             />
                         </Link>
                     </div>
@@ -55,17 +55,17 @@ export default function Navbar() {
                     {/* Links de navegação (visíveis em telas maiores) */}
                     <div className="hidden md:block">
                         <div className="ml-10 flex items-baseline space-x-4">
-                            <Link href="/" className="hover:text-red-500 active:text-red-700 px-3 py-2 transition-colors duration-200">
+                            <Link href="/" className="hover:text-purple-500 active:text-purple-700 px-3 py-2 transition-colors duration-200">
                                 Início
                             </Link>
-                            <Link href="#plans" className="hover:text-red-500 active:text-red-700 px-3 py-2 transition-colors duration-200">
+                            <Link href="#plans" className="hover:text-purple-500 active:text-purple-700 px-3 py-2 transition-colors duration-200">
                                 Planos
                             </Link>
 
-                            <Link href="#about" className="hover:text-red-500 active:text-red-700 px-3 py-2 transition-colors duration-200">
+                            <Link href="#about" className="hover:text-purple-500 active:text-purple-700 px-3 py-2 transition-colors duration-200">
                                 Sobre
                             </Link>
-                            {/* <Link href="#contato" className="hover:text-red-500 active:text-red-700 px-3 py-2 transition-colors duration-200">
+                            {/* <Link href="#contato" className="hover:text-purple-500 active:text-purple-700 px-3 py-2 transition-colors duration-200">
                                 Contato
                             </Link> */}
                         </div>
@@ -89,17 +89,17 @@ export default function Navbar() {
                         }`}
                 >
                     <div className="flex flex-col items-center justify-center space-y-4 pb-3">
-                        <Link href="#" onClick={closeMenu} className="w-full hover:bg-red-500 active:bg-red-700 px-3 py-2 text-center rounded-md transition-colors duration-200">
+                        <Link href="#" onClick={closeMenu} className="w-full hover:bg-purple-500 active:bg-purple-700 px-3 py-2 text-center rounded-md transition-colors duration-200">
                             Início
                         </Link>
-                        <Link href="#plans" onClick={closeMenu} className="w-full hover:bg-red-500 active:bg-red-700 px-3 py-2 text-center rounded-md transition-colors duration-200">
+                        <Link href="#plans" onClick={closeMenu} className="w-full hover:bg-purple-500 active:bg-purple-700 px-3 py-2 text-center rounded-md transition-colors duration-200">
                             Planos
                         </Link>
 
-                        <Link href="#about" onClick={closeMenu} className="w-full hover:bg-red-500 active:bg-red-700 px-3 py-2 text-center rounded-md transition-colors duration-200">
+                        <Link href="#about" onClick={closeMenu} className="w-full hover:bg-purple-500 active:bg-purple-700 px-3 py-2 text-center rounded-md transition-colors duration-200">
                             Sobre
                         </Link>
-                        {/* <Link href="#contato" onClick={closeMenu} className="w-full hover:bg-red-500 active:bg-red-700 px-3 py-2 text-center rounded-md transition-colors duration-200">
+                        {/* <Link href="#contato" onClick={closeMenu} className="w-full hover:bg-purple-500 active:bg-purple-700 px-3 py-2 text-center rounded-md transition-colors duration-200">
                             Contato
                         </Link> */}
                     </div>
