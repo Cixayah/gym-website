@@ -81,7 +81,7 @@ export default function Footer() {
                             </li>
                             <li>
                                 <Link
-                                    href="https://api.whatsapp.com/send/?phone=5517997881068&text=Olá%2C+vim+pelo+site+e+gostaria+de+mais+informações&type=phone_number&app_absent=0"
+                                    href="https://api.whatsapp.com/send/?phone=551100000000&text=Olá%2C+vim+pelo+site+e+gostaria+de+mais+informações&type=phone_number&app_absent=0"
                                     target="_blank"
                                     className="text-gray-300 hover:text-white transition-colors duration-200"
                                 >

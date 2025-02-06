@@ -64,7 +64,7 @@ const plans: Plan[] = [
 export default function Home() {
   const handleWhatsAppClick = (plan: Plan) => {
     const message = `Olá, vim pelo site e gostaria de assinar o plano ${plan.title} de R$ ${plan.price}`;
-    const whatsappUrl = `https://wa.me/5517997881068?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/551100000000?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
