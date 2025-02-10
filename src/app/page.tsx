@@ -34,29 +34,32 @@ const benefits = [
 
 const plans: Plan[] = [
   {
-    title: "Plano FIT",
-    price: "80,00",
+    title: "Plano Básico", // Título simples e direto
+    price: "70,00", // Preço acessível
     features: [
-      "Segunda à sábado",
-      "Apenas das 09:00 às 16:00",
+      "Acesso de segunda a sábado", // Padrão: começa com "Acesso"
+      "Horário limitado: das 09:00 às 16:00", // Padrão: "Horário" seguido de detalhes
+      "Ideal para quem treina no período da manhã ou tarde", // Padrão: "Ideal para" + público-alvo
     ],
   },
   {
-    title: "Plano Econômico",
-    price: "80,00",
+    title: "Plano Intermediário", // Título que indica um nível acima
+    price: "80,00", // Preço intermediário
     features: [
-      "3x por semana podendo escolher os dias",
-      "De segunda à sexta das 5:30 às 21:00",
-      "Aos sábados 09:00 às 12:00 e 15:00 às 17:00",
+      "Acesso 3 dias por semana, com escolha de dias", // Padrão: "Acesso" + detalhes
+      "Horário amplo: segunda a sexta das 5:30 às 21:00", // Padrão: "Horário" + detalhes
+      "Aos sábados: manhã (09:00 às 12:00) ou tarde (15:00 às 17:00)", // Padrão: "Aos sábados" + detalhes
+      "Ideal para quem busca flexibilidade na rotina", // Padrão: "Ideal para" + público-alvo
     ],
   },
   {
-    title: "Plano Extreme",
-    price: "90,00",
+    title: "Plano Completo", // Título que indica totalidade
+    price: "90,00", // Preço mais alto, justificado pelos benefícios
     features: [
-      "De segunda à sábado",
-      "De segunda à sexta das 5:30 às 21:00",
-      "Aos sábados 09:00 às 12:00 e 15:00 às 17:00",
+      "Acesso ilimitado de segunda a sábado", // Padrão: "Acesso" + detalhes
+      "Horário estendido: segunda a sexta das 5:30 às 21:00", // Padrão: "Horário" + detalhes
+      "Aos sábados: manhã (09:00 às 12:00) ou tarde (15:00 às 17:00)", // Padrão: "Aos sábados" + detalhes
+      "Ideal para quem quer treinar sem restrições", // Padrão: "Ideal para" + público-alvo
     ],
   },
 ];
