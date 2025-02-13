@@ -1,27 +1,25 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { SiInstagram, SiFacebook, SiWhatsapp } from 'react-icons/si';
+import { SiInstagram, SiFacebook, SiWhatsapp, SiTiktok } from 'react-icons/si';
 
 export default function Footer() {
     return (
         <footer className="bg-black text-white py-8">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                    {/* Logo */}
-                    <div>
-                        <div className="mb-4" >
-                            <Link href="/">
+                    {/* Logo - Increased dimensions */}
+                    <div className="flex items-center justify-center md:justify-start">
+                        <div className="relative w-[400px] h-[150px]">
+                            <Link href="/" className="block w-full h-full">
                                 <Image
                                     src="/gymcix_logo.png"
                                     alt="gymcix_logo"
-                                    width={300}
-                                    height={100}
+                                    fill
                                     className="object-contain transition-transform duration-300 hover:scale-110"
+                                    priority
                                 />
                             </Link>
-
                         </div>
-                        {/* <p className="text-gray-300">Sua academia para resultados reais</p> */}
                     </div>
 
                     {/* Links Rápidos */}
@@ -38,7 +36,6 @@ export default function Footer() {
                                     Planos
                                 </Link>
                             </li>
-
                             <li>
                                 <Link href="#about" className="text-gray-300 hover:text-white transition-colors duration-200">
                                     Sobre
@@ -63,7 +60,7 @@ export default function Footer() {
                         <ul className="flex space-x-6">
                             <li>
                                 <Link
-                                    href="https://www.instagram.com/academiaextremefitness_/"
+                                    href="https://www.instagram.com/devcix"
                                     target="_blank"
                                     className="text-gray-300 hover:text-white transition-colors duration-200"
                                 >
@@ -72,7 +69,7 @@ export default function Footer() {
                             </li>
                             <li>
                                 <Link
-                                    href="https://www.facebook.com/profile.php?id=100009066871226"
+                                    href="https://www.facebook.com/"
                                     target="_blank"
                                     className="text-gray-300 hover:text-white transition-colors duration-200"
                                 >
@@ -88,7 +85,15 @@ export default function Footer() {
                                     <SiWhatsapp size={24} />
                                 </Link>
                             </li>
-
+                            <li>
+                                <Link
+                                    href="https://tiktok.com/@cixayah"
+                                    target="_blank"
+                                    className="text-gray-300 hover:text-white transition-colors duration-200"
+                                >
+                                    <SiTiktok size={24} />
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                 </div>
