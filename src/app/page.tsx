@@ -127,6 +127,7 @@ export default function Home() {
       <section className="py-12 md:py-16 bg-gradient-to-r from-purple-900/20 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+            {/* Text Content */}
             <div className="order-2 md:order-1 text-center md:text-left">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-white">
                 <span className="text-purple-500">Transforme</span> sua vida
@@ -140,7 +141,9 @@ export default function Home() {
                 Comece Agora
               </button>
             </div>
-            <div className="order-1 md:order-2 relative w-full md:w-auto">
+
+            {/* Image Content */}
+            <div className="order-1 md:order-2 relative w-full md:w-1/2">
               <div className="relative aspect-video rounded-lg overflow-hidden">
                 <Image
                   src="/gymcix_logo.png"
