@@ -1,6 +1,6 @@
 'use client'
 
-import HeroCarousel from './components/HeroCarousel';
+import HeroCarousel from '@/components/HeroCarousel';
 import { Dumbbell, Users, Clock /* Mail, Phone, MapPin */ } from 'lucide-react';
 import Image from 'next/image';
 
