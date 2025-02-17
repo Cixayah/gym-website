@@ -1,128 +1,224 @@
 'use client'
 
-import HeroCarousel from '@/components/HeroCarousel';
-import { Dumbbell, Users, Clock /* Mail, Phone, MapPin */ } from 'lucide-react';
+import {
+  Dumbbell,
+  Users,
+  Clock,
+  Target,
+  Award,
+  Heart,
+  Activity,
+  Zap,
+  Timer
+} from 'lucide-react';
 import Image from 'next/image';
+import HeroCarousel from '@/components/HeroCarousel';
 
-// Define the type for plan object
 interface Plan {
   title: string;
   price: string;
   features: string[];
+  highlight?: boolean;
 }
 
 const benefits = [
   {
-    title: "Equipamentos",
-    titleColor: "text-gray-100",
-    description: "Academia completa com todos os equipamentos necessários",
-    icon: <Dumbbell className="w-6 h-6 text-purple-600" />,
+    title: "Equipamentos Modernos",
+    description: "Academia completa com equipamentos de última geração",
+    icon: <Dumbbell className="w-6 h-6 text-purple-500" />,
   },
   {
-    title: "Profissionais Qualificados",
-    titleColor: "text-gray-100",
-    description: "Equipe de instrutores especializados para te auxiliar",
-    icon: <Users className="w-6 h-6 text-purple-600" />,
+    title: "Profissionais Experts",
+    description: "Equipe especializada com anos de experiência",
+    icon: <Users className="w-6 h-6 text-purple-500" />,
   },
   {
-    title: "Horário Flexível",
-    titleColor: "text-gray-100",
-    description: "Academia aberta de segunda à sábado, inclusive em feriados",
-    icon: <Clock className="w-6 h-6 text-purple-600" />,
+    title: "Horários Flexíveis",
+    description: "Funcionamento estendido, inclusive feriados",
+    icon: <Clock className="w-6 h-6 text-purple-500" />,
+  },
+  {
+    title: "Foco em Resultados",
+    description: "Acompanhamento personalizado de objetivos",
+    icon: <Target className="w-6 h-6 text-purple-500" />,
+  },
+  {
+    title: "Qualidade Garantida",
+    description: "Ambiente premium e serviço de excelência",
+    icon: <Award className="w-6 h-6 text-purple-500" />,
+  },
+  {
+    title: "Bem-estar Total",
+    description: "Cuidado integral com sua saúde",
+    icon: <Heart className="w-6 h-6 text-purple-500" />,
   },
 ];
 
 const plans: Plan[] = [
   {
-    title: "Plano Básico", // Título simples e direto
-    price: "70,00", // Preço acessível
+    title: "Plano Start",
+    price: "70,00",
     features: [
-      "Acesso de segunda a sábado", // Padrão: começa com "Acesso"
-      "Horário limitado: das 09:00 às 16:00", // Padrão: "Horário" seguido de detalhes
-      "Ideal para quem treina no período da manhã ou tarde", // Padrão: "Ideal para" + público-alvo
+      "Acesso de segunda a sábado",
+      "Horário limitado: 09:00 às 16:00",
+      "Avaliação física mensal",
+      "Acesso à área de musculação",
     ],
   },
   {
-    title: "Plano Intermediário", // Título que indica um nível acima
-    price: "80,00", // Preço intermediário
+    title: "Plano Plus",
+    price: "90,00",
+    highlight: true,
     features: [
-      "Acesso 3 dias por semana, com escolha de dias", // Padrão: "Acesso" + detalhes
-      "Horário amplo: segunda a sexta das 5:30 às 21:00", // Padrão: "Horário" + detalhes
-      "Aos sábados: manhã (09:00 às 12:00) ou tarde (15:00 às 17:00)", // Padrão: "Aos sábados" + detalhes
-      "Ideal para quem busca flexibilidade na rotina", // Padrão: "Ideal para" + público-alvo
+      "Acesso ilimitado",
+      "Horário completo: 05:30 às 22:00",
+      "Avaliação física quinzenal",
+      "Acesso a todas as áreas",
+      "Aulas coletivas inclusas",
+      "Programa personalizado",
     ],
   },
   {
-    title: "Plano Completo", // Título que indica totalidade
-    price: "90,00", // Preço mais alto, justificado pelos benefícios
+    title: "Plano Basic",
+    price: "80,00",
     features: [
-      "Acesso ilimitado de segunda a sábado", // Padrão: "Acesso" + detalhes
-      "Horário estendido: segunda a sexta das 5:30 às 21:00", // Padrão: "Horário" + detalhes
-      "Aos sábados: manhã (09:00 às 12:00) ou tarde (15:00 às 17:00)", // Padrão: "Aos sábados" + detalhes
-      "Ideal para quem quer treinar sem restrições", // Padrão: "Ideal para" + público-alvo
+      "Acesso 3x por semana",
+      "Horário: 05:30 às 22:00",
+      "Avaliação física mensal",
+      "Acesso à musculação e cardio",
+      "Aulas coletivas inclusas",
     ],
   },
 ];
 
+const stats = [
+  { value: "10+", label: "Anos de Experiência", icon: <Timer className="w-6 h-6 text-purple-500" /> },
+  { value: "1000+", label: "Alunos Ativos", icon: <Activity className="w-6 h-6 text-purple-500" /> },
+  { value: "50+", label: "Equipamentos", icon: <Dumbbell className="w-6 h-6 text-purple-500" /> },
+  { value: "95%", label: "Taxa de Satisfação", icon: <Zap className="w-6 h-6 text-purple-500" /> },
+];
+
 export default function Home() {
   const handleWhatsAppClick = (plan: Plan) => {
-    const message = `Olá, vim pelo site e gostaria de assinar o plano ${plan.title} de R$ ${plan.price}`;
-    const whatsappUrl = `https://wa.me/551100000000?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
+    const message = `Olá! Tenho interesse no ${plan.title} de R$ ${plan.price}. Gostaria de mais informações.`;
+    window.open(`https://wa.me/551100000000?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   return (
-    <>
+    <div className="bg-gradient-to-b from-gray-900 to-black min-h-screen">
       <HeroCarousel />
 
-      <section className="py-16 text-white" id="about">
+      {/* Stats Section */}
+      <section className="py-12 bg-black/50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat) => (
+              <div key={stat.label} className="text-center">
+                <div className="flex justify-center mb-4">{stat.icon}</div>
+                <div className="text-3xl font-bold text-purple-500 mb-2">{stat.value}</div>
+                <div className="text-gray-300 text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Section with Purple Gradient */}
+      <section className="py-16 bg-gradient-to-r from-purple-900/20 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-6">Sobre a GYM CIX</h2>
-              <p className="mb-4">
-                Com mais de 10 anos de atuação no mercado, a GYM CIX se destaca como uma referência quando o assunto é qualidade e resultados consistentes. Durante mais de uma década, nos empenhamos em transformar vidas por meio do esporte, promovendo a saúde, o bem-estar e a superação pessoal. Nosso compromisso é ser a ponte que conecta nossos alunos ao melhor de si mesmos, seja para atingir seus objetivos fitness, melhorar a qualidade de vida ou simplesmente buscar uma rotina mais saudável.
+              <h2 className="text-4xl font-bold mb-6 text-white">
+                <span className="text-purple-500">Transforme</span> sua vida
+              </h2>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                Há mais de uma década, a GYM CIX tem sido sinônimo de excelência e resultados.
+                Nossa missão é transformar vidas através do esporte, promovendo saúde,
+                bem-estar e superação pessoal.
               </p>
-              <p>
-                Para isso, contamos com uma equipe de profissionais altamente qualificados, que estão sempre prontos para oferecer orientação personalizada e acompanhamento contínuo. Nossas instalações bem equipadas, foram pensadas para proporcionar o máximo de conforto e eficiência, garantindo que cada aluno tenha a melhor experiência possível, desde o momento em que entra em nossa academia até a conquista de seus objetivos.
-              </p>
-
+              <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full transition-all transform hover:scale-105">
+                Comece Agora
+              </button>
             </div>
-            <div className="relative aspect-video rounded-lg">
-              <Image
-                src="/gymcix_logo.png"
-                alt="Academia"
-                width={500}
-                height={500}
-                className="object-contain transition-transform duration-300 hover:scale-110"
-              />
+            <div className="relative">
+              <div className="relative aspect-video rounded-lg overflow-hidden">
+                <Image
+                  src="/gymcix_logo.png"
+                  alt="Academia"
+                  fill
+                  className="object-contain transform hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-purple-500/20 rounded-full blur-2xl"></div>
             </div>
           </div>
         </div>
-      </section >
+      </section>
 
-      <section className="py-16  bg-black-950 rounded-lg" id="plans" >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12 text-white">Nossos Planos</h2>
+      {/* Benefits Grid with Hover Effects */}
+      <section className="py-16 bg-black/80">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12 text-white">
+            Por que escolher a <span className="text-purple-500">GYM CIX</span>?
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {benefits.map((benefit) => (
+              <div
+                key={benefit.title}
+                className="p-6 rounded-lg bg-gray-900/50 hover:bg-gray-800/50 transition-all transform hover:-translate-y-1 border border-purple-500/20"
+              >
+                <div className="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-purple-500/10">
+                  {benefit.icon}
+                </div>
+                <h3 className="text-xl font-semibold mb-2 text-white">{benefit.title}</h3>
+                <p className="text-gray-400">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Plans with Purple Accents */}
+      <section className="py-16 bg-gradient-to-b from-black to-purple-900/20">
+        <div className="max-w-7xl mx-auto px-4" id="plans">
+          <h2 className="text-3xl font-bold text-center mb-12 text-white">
+            Planos <span className="text-purple-500">Flexíveis </span>
+          </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {plans.map((plan) => (
-              <div key={plan.title} className="bg-gray-100 p-6 rounded-lg shadow-md flex flex-col h-full">
+              <div
+                key={plan.title}
+                className={`relative p-6 rounded-lg ${plan.highlight
+                  ? 'bg-purple-900 text-white shadow-xl shadow-purple-500/20'
+                  : 'bg-gray-900 text-gray-100'
+                  } flex flex-col h-full transform hover:-translate-y-1 transition-all`}
+              >
+                {plan.highlight && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-purple-500 text-white px-4 py-1 rounded-full text-sm">
+                    Mais Popular
+                  </div>
+                )}
                 <div className="flex-grow">
-                  <h3 className="text-xl font-bold mb-4 text-purple-950">{plan.title}</h3>
-                  <p className="text-3xl font-bold mb-4 text-purple-950">R$ {plan.price}</p>
-                  <ul className="space-y-2 mb-6">
+                  <h3 className="text-xl font-bold mb-4">{plan.title}</h3>
+                  <p className="text-3xl font-bold mb-4">
+                    R$ <span className="text-purple-500">{plan.price}</span>
+                  </p>
+                  <ul className="space-y-3 mb-6">
                     {plan.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-2 text-gray-700">
-                        <span className="text-green-500">✓</span> {feature}
+                      <li key={feature} className="flex items-center gap-2">
+                        <span className="text-purple-500">✓</span> {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
                 <button
                   onClick={() => handleWhatsAppClick(plan)}
-                  className="w-full py-2 px-4 bg-purple-600 hover:bg-purple-700 text-white rounded-md transition-colors mt-auto"
+                  className={`w-full py-3 px-4 rounded-lg transition-colors ${plan.highlight
+                    ? 'bg-white text-purple-900 hover:bg-gray-100'
+                    : 'bg-purple-600 hover:bg-purple-700 text-white'
+                    }`}
                 >
-                  Assinar Agora
+                  Começar Agora
                 </button>
               </div>
             ))}
@@ -130,45 +226,21 @@ export default function Home() {
         </div>
       </section>
 
-
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Por que escolher a GYM CIX?
+      {/* CTA Section */}
+      <section className="py-16 bg-purple-900/20">
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Pronto para começar sua <span className="text-purple-500">transformação</span>?
           </h2>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {benefits.map((benefit) => (
-              <div
-                key={benefit.title}
-                className="text-center p-6 rounded-lg bg-black-950"
-              >
-                <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full bg-gray-100">
-                  {benefit.icon}
-                </div>
-                <h3 className={`text-xl font-semibold mb-2 ${benefit.titleColor}`}>{benefit.title}</h3>
-                <p className="text-gray-400">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Junte-se a milhares de pessoas que já transformaram suas vidas com a GYM CIX.
+            Seu objetivo é nossa prioridade.
+          </p>
+          <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-105">
+            Agende uma Aula Experimental
+          </button>
         </div>
       </section>
-      {/* <section className="py-16" id="contact">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Contato</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {contactInfo.map((info) => (
-              <div key={info.title} className="text-center">
-                <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full bg-gray-100">
-                  {info.icon}
-                </div>
-                <h3 className="font-semibold mb-2">{info.title}</h3>
-                <p className="text-gray-600">{info.content}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-    </>
+    </div>
   );
 }
