@@ -19,7 +19,7 @@ export default async function TestPage() {
                 {/* Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {/* Card 1 */}
-                    <div className="bg-purple-900 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div className="bg-black rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                         <div className="relative w-full h-48">
                             <Image
                                 src="https://picsum.photos/seed/gym1/400/300"
@@ -38,7 +38,7 @@ export default async function TestPage() {
                     </div>
 
                     {/* Card 2 */}
-                    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div className="bg-black rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                         <div className="relative w-full h-48">
                             <Image
                                 src="https://picsum.photos/seed/gym2/400/300"
@@ -57,7 +57,7 @@ export default async function TestPage() {
                     </div>
 
                     {/* Card 3 */}
-                    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div className="bg-black rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                         <div className="relative w-full h-48">
                             <Image
                                 src="https://picsum.photos/400/300"
