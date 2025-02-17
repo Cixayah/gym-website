@@ -155,36 +155,35 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Benefits Grid with Hover Effects */}
       <section className="py-12 md:py-16 bg-black/80">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-white">
             Por que escolher a <span className="text-purple-500">GYM CIX</span>?
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 justify-center">
             {benefits.map((benefit) => (
               <div
                 key={benefit.title}
-                className="p-4 md:p-6 rounded-lg bg-gray-900/50 hover:bg-gray-800/50 transition-all transform hover:-translate-y-1 border border-purple-500/20"
+                className="p-4 md:p-6 rounded-lg bg-gray-900/50 hover:bg-gray-800/50 transition-all transform hover:-translate-y-1 border border-purple-500/20 flex flex-col items-center"
               >
                 <div className="w-10 h-10 md:w-12 md:h-12 mb-2 md:mb-4 flex items-center justify-center rounded-full bg-purple-500/10">
                   {benefit.icon}
                 </div>
-                <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2 text-white">{benefit.title}</h3>
-                <p className="text-xs md:text-sm text-gray-400">{benefit.description}</p>
+                <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2 text-white text-center">{benefit.title}</h3>
+                <p className="text-xs md:text-sm text-gray-400 text-center">{benefit.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Plans with Purple Accents */}
+
       <section className="py-12 md:py-16 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4" id="plans">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-white">
             Planos <span className="text-purple-500">Flexíveis </span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 justify-center">
             {plans.map((plan) => (
               <div
                 key={plan.title}
@@ -199,8 +198,8 @@ export default function Home() {
                   </div>
                 )}
                 <div className="flex-grow">
-                  <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-4">{plan.title}</h3>
-                  <p className="text-2xl md:text-3xl font-bold mb-2 md:mb-4">
+                  <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-4 text-center">{plan.title}</h3>
+                  <p className="text-2xl md:text-3xl font-bold mb-2 md:mb-4 text-center">
                     R$ <span className="text-purple-500">{plan.price}</span>
                   </p>
                   <ul className="space-y-2 md:space-y-3 mb-4 md:mb-6">
@@ -225,6 +224,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
 
       {/* CTA Section */}
       <section className="py-12 md:py-16 bg-purple-900/20">
