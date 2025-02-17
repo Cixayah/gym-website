@@ -111,12 +111,12 @@ export default function Home() {
       {/* Stats Section */}
       <section className="py-12 bg-black/50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="flex justify-center mb-4">{stat.icon}</div>
-                <div className="text-3xl font-bold text-purple-500 mb-2">{stat.value}</div>
-                <div className="text-gray-300 text-sm">{stat.label}</div>
+              <div key={stat.label} className="text-center p-2">
+                <div className="flex justify-center mb-2 md:mb-4">{stat.icon}</div>
+                <div className="text-2xl md:text-3xl font-bold text-purple-500 mb-1 md:mb-2">{stat.value}</div>
+                <div className="text-xs md:text-sm text-gray-300">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -124,23 +124,23 @@ export default function Home() {
       </section>
 
       {/* About Section with Purple Gradient */}
-      <section className="py-16 bg-gradient-to-r from-purple-900/20 to-black">
+      <section className="py-12 md:py-16 bg-gradient-to-r from-purple-900/20 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold mb-6 text-white">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+            <div className="order-2 md:order-1 text-center md:text-left">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-white">
                 <span className="text-purple-500">Transforme</span> sua vida
               </h2>
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <p className="text-sm md:text-base text-gray-300 mb-6 leading-relaxed">
                 Há mais de uma década, a GYM CIX tem sido sinônimo de excelência e resultados.
                 Nossa missão é transformar vidas através do esporte, promovendo saúde,
                 bem-estar e superação pessoal.
               </p>
-              <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full transition-all transform hover:scale-105">
+              <button className="bg-purple-600 hover:bg-purple-700 text-white px-6 md:px-8 py-2 md:py-3 rounded-full transition-all transform hover:scale-105">
                 Comece Agora
               </button>
             </div>
-            <div className="relative">
+            <div className="order-1 md:order-2 relative w-full md:w-auto">
               <div className="relative aspect-video rounded-lg overflow-hidden">
                 <Image
                   src="/gymcix_logo.png"
@@ -149,29 +149,29 @@ export default function Home() {
                   className="object-contain transform hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-purple-500/20 rounded-full blur-2xl"></div>
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 md:w-32 md:h-32 bg-purple-500/20 rounded-full blur-2xl"></div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Benefits Grid with Hover Effects */}
-      <section className="py-16 bg-black/80">
+      <section className="py-12 md:py-16 bg-black/80">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-white">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-white">
             Por que escolher a <span className="text-purple-500">GYM CIX</span>?
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
             {benefits.map((benefit) => (
               <div
                 key={benefit.title}
-                className="p-6 rounded-lg bg-gray-900/50 hover:bg-gray-800/50 transition-all transform hover:-translate-y-1 border border-purple-500/20"
+                className="p-4 md:p-6 rounded-lg bg-gray-900/50 hover:bg-gray-800/50 transition-all transform hover:-translate-y-1 border border-purple-500/20"
               >
-                <div className="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-purple-500/10">
+                <div className="w-10 h-10 md:w-12 md:h-12 mb-2 md:mb-4 flex items-center justify-center rounded-full bg-purple-500/10">
                   {benefit.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-white">{benefit.title}</h3>
-                <p className="text-gray-400">{benefit.description}</p>
+                <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2 text-white">{benefit.title}</h3>
+                <p className="text-xs md:text-sm text-gray-400">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -179,33 +179,33 @@ export default function Home() {
       </section>
 
       {/* Plans with Purple Accents */}
-      <section className="py-16 bg-gradient-to-b from-black to-purple-900/20">
+      <section className="py-12 md:py-16 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4" id="plans">
-          <h2 className="text-3xl font-bold text-center mb-12 text-white">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-white">
             Planos <span className="text-purple-500">Flexíveis </span>
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
             {plans.map((plan) => (
               <div
                 key={plan.title}
-                className={`relative p-6 rounded-lg ${plan.highlight
+                className={`relative p-4 md:p-6 rounded-lg ${plan.highlight
                   ? 'bg-purple-900 text-white shadow-xl shadow-purple-500/20'
                   : 'bg-gray-900 text-gray-100'
                   } flex flex-col h-full transform hover:-translate-y-1 transition-all`}
               >
                 {plan.highlight && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-purple-500 text-white px-4 py-1 rounded-full text-sm">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-purple-500 text-white px-3 py-1 rounded-full text-xs md:text-sm">
                     Mais Popular
                   </div>
                 )}
                 <div className="flex-grow">
-                  <h3 className="text-xl font-bold mb-4">{plan.title}</h3>
-                  <p className="text-3xl font-bold mb-4">
+                  <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-4">{plan.title}</h3>
+                  <p className="text-2xl md:text-3xl font-bold mb-2 md:mb-4">
                     R$ <span className="text-purple-500">{plan.price}</span>
                   </p>
-                  <ul className="space-y-3 mb-6">
+                  <ul className="space-y-2 md:space-y-3 mb-4 md:mb-6">
                     {plan.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-2">
+                      <li key={feature} className="flex items-center gap-2 text-xs md:text-sm">
                         <span className="text-purple-500">✓</span> {feature}
                       </li>
                     ))}
@@ -213,7 +213,7 @@ export default function Home() {
                 </div>
                 <button
                   onClick={() => handleWhatsAppClick(plan)}
-                  className={`w-full py-3 px-4 rounded-lg transition-colors ${plan.highlight
+                  className={`w-full py-2 md:py-3 px-4 rounded-lg transition-colors ${plan.highlight
                     ? 'bg-white text-purple-900 hover:bg-gray-100'
                     : 'bg-purple-600 hover:bg-purple-700 text-white'
                     }`}
@@ -227,16 +227,16 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-purple-900/20">
+      <section className="py-12 md:py-16 bg-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
+          <h2 className="text-2xl md:text-4xl font-bold text-white mb-4 md:mb-6">
             Pronto para começar sua <span className="text-purple-500">transformação</span>?
           </h2>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-xs md:text-sm text-gray-300 mb-6 md:mb-8 max-w-2xl mx-auto">
             Junte-se a milhares de pessoas que já transformaram suas vidas com a GYM CIX.
             Seu objetivo é nossa prioridade.
           </p>
-          <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-105">
+          <button className="bg-purple-600 hover:bg-purple-700 text-white px-6 md:px-8 py-2 md:py-4 rounded-full text-sm md:text-lg font-semibold transition-all transform hover:scale-105">
             Agende uma Aula Experimental
           </button>
         </div>
