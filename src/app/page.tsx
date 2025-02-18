@@ -204,8 +204,8 @@ export default function Home() {
                   <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-4 text-center md:text-left">
                     {plan.title}
                   </h3>
-                  <p className="text-2xl md:text-3xl font-bold mb-2 md:mb-4 text-center md:text-left">
-                    R$ <span className="text-purple-500">{plan.price}</span>
+                  <p className="text-2xl md:text-4xl font-bold mb-2 md:mb-4 text-center md:text-left">
+                    R$ <span className="text-purple-100">{plan.price}</span>
                   </p>
                   <ul className="space-y-2 md:space-y-3 mb-4 md:mb-6">
                     {plan.features.map((feature) => (
