@@ -65,9 +65,9 @@ export default function Navbar() {
                             <Link href="#about" className="hover:text-purple-500 active:text-purple-700 px-3 py-2 transition-colors duration-200">
                                 Sobre
                             </Link>
-                            <Link href="/teste" className="hover:text-purple-500 active:text-purple-700 px-3 py-2 transition-colors duration-200">
+                            {/* <Link href="/teste" className="hover:text-purple-500 active:text-purple-700 px-3 py-2 transition-colors duration-200">
                                 Teste
-                            </Link>
+                            </Link> */}
 
                             {/* <Link href="#contato" className="hover:text-purple-500 active:text-purple-700 px-3 py-2 transition-colors duration-200">
                                 Contato
